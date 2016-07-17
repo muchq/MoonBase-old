@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>MoonBase</artifactId>
+    <groupId>org.snackunderflow</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <properties>
+    <andy.mainClass>com.andyaylward.lunarexample.ExampleApp</andy.mainClass>
+  </properties>
+
+  <artifactId>ExampleApp</artifactId>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.snackunderflow</groupId>
+      <artifactId>LunarCat</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.snackunderflow</groupId>
+      <artifactId>Mentat</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+</project>

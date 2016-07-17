@@ -1,4 +1,4 @@
-package org.snackunderflow.example;
+package com.andyaylward.lunarexample;
 
 import com.google.inject.Inject;
 import com.google.inject.name.Named;

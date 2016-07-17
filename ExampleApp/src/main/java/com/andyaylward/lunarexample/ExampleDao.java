@@ -1,4 +1,4 @@
-package org.snackunderflow.example;
+package com.andyaylward.lunarexample;
 
 import org.skife.jdbi.v2.sqlobject.Bind;
 import org.skife.jdbi.v2.sqlobject.GetGeneratedKeys;

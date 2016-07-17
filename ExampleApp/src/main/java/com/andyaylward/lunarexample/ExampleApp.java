@@ -1,4 +1,4 @@
-package org.snackunderflow.example;
+package com.andyaylward.lunarexample;
 
 import org.snackunderflow.BaseService;
 import org.snackunderflow.config.Configuration;

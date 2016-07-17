@@ -18,6 +18,7 @@
   <modules>
     <module>Mentat</module>
     <module>LunarCat</module>
+    <module>ExampleApp</module>
   </modules>
 
 </project>

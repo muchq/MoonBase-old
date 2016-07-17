@@ -1,4 +1,4 @@
-package org.snackunderflow.example;
+package com.andyaylward.lunarexample;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
