@@ -3,9 +3,9 @@ package org.snackunderflow.mentat;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.google.inject.Singleton;
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 import org.skife.jdbi.v2.DBI;
-
-import javax.sql.DataSource;
 
 public class MentatModule extends AbstractModule {
   @Override
@@ -15,7 +15,12 @@ public class MentatModule extends AbstractModule {
   @Provides
   @Singleton
   public DBI getDbi(MySqlConfiguration configuration) {
-    DataSource dataSource = new MentatDataSourceProvider(configuration).get();
-    return new DBI(dataSource);
+    HikariConfig config = new HikariConfig("/hikari.properties");
+    config.setUsername(configuration.getUsername());
+    config.setPassword(configuration.getPassword());
+    config.addDataSourceProperty("databaseName", configuration.getDb());
+    config.addDataSourceProperty("serverName", configuration.getHost());
+
+    return new DBI(new HikariDataSource(config));
   }
 }
