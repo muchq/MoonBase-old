@@ -9,10 +9,10 @@ import javax.ws.rs.Path;
 import javax.ws.rs.ext.Provider;
 import java.util.Set;
 
-public class RestEasyGuiceModule extends AbstractModule {
+public class LunarCatServiceModule extends AbstractModule {
   private final Set<String> packagesToScan = Sets.newHashSet("org.snackunderflow");
 
-  public RestEasyGuiceModule(String basePackage) {
+  public LunarCatServiceModule(String basePackage) {
     this.packagesToScan.add(basePackage);
   }
 

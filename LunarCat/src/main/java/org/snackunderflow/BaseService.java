@@ -5,7 +5,7 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
 import org.snackunderflow.config.Configuration;
-import org.snackunderflow.config.RestEasyGuiceModule;
+import org.snackunderflow.config.LunarCatServiceModule;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -41,7 +41,7 @@ public class BaseService {
 
   private Injector createInjector(Configuration configuration) {
     Set<Module> modules = configuration.getModules();
-    modules.add(new RestEasyGuiceModule(configuration.getBasePackage().getName()));
+    modules.add(new LunarCatServiceModule(configuration.getBasePackage().getName()));
     Injector injector = Guice.createInjector(modules);
     injector.getAllBindings();
     injector.createChildInjector().getAllBindings();

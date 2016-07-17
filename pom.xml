@@ -16,6 +16,7 @@
   </parent>
 
   <modules>
+    <module>Mentat</module>
     <module>LunarCat</module>
   </modules>
 
