@@ -1,5 +1,6 @@
 package com.andyaylward.lunarexample;
 
+import com.andyaylward.lunarexample.config.ExampleModule;
 import org.snackunderflow.BaseService;
 import org.snackunderflow.config.Configuration;
 

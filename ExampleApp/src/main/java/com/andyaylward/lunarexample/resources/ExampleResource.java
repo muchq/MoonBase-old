@@ -1,5 +1,7 @@
-package com.andyaylward.lunarexample;
+package com.andyaylward.lunarexample.resources;
 
+import com.andyaylward.lunarexample.data.ExampleDao;
+import com.andyaylward.lunarexample.data.ExampleRecord;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 
@@ -10,6 +12,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 @Path("hello")
 @Produces(MediaType.APPLICATION_JSON)
@@ -32,9 +35,8 @@ public class ExampleResource {
 
   @GET
   @Path("{id}")
-  public Map<String, String> sayHello(@PathParam("id") int id) {
-    Map<String, String> output = new HashMap<>();
-    output.put("yo", greeting + " " + dao.getNameById(id));
-    return output;
+  public Optional<ExampleRecord> sayHello(@PathParam("id") int id) {
+    Optional<ExampleRecord> recordMaybe = dao.getRecordById(id);
+    return recordMaybe;
   }
 }

@@ -1,13 +1,14 @@
 package org.snackunderflow.mentat;
 
-import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.google.inject.Singleton;
+import com.hubspot.rosetta.jdbi.RosettaMapperFactory;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.skife.jdbi.v2.DBI;
+import org.snackunderflow.moonbase.core.BaseGuiceModule;
 
-public class MentatModule extends AbstractModule {
+public class MentatModule extends BaseGuiceModule {
   @Override
   protected void configure() {
   }
@@ -21,6 +22,9 @@ public class MentatModule extends AbstractModule {
     config.addDataSourceProperty("databaseName", configuration.getDb());
     config.addDataSourceProperty("serverName", configuration.getHost());
 
-    return new DBI(new HikariDataSource(config));
+    DBI dbi = new DBI(new HikariDataSource(config));
+    dbi.registerMapper(new RosettaMapperFactory());
+    dbi.registerContainerFactory(new OptionalContainerFactory());
+    return dbi;
   }
 }
