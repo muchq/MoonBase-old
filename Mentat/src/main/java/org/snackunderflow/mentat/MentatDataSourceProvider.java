@@ -7,18 +7,19 @@ import com.zaxxer.hikari.HikariDataSource;
 import javax.sql.DataSource;
 
 public class MentatDataSourceProvider implements Provider<DataSource> {
-  private final String databaseName;
+  private final MySqlConfiguration mySqlConfiguration;
 
-  public MentatDataSourceProvider(String databaseName) {
-    this.databaseName = databaseName;
+  public MentatDataSourceProvider(MySqlConfiguration mySqlConfiguration) {
+    this.mySqlConfiguration = mySqlConfiguration;
   }
 
   @Override
   public DataSource get() {
     HikariConfig config = new HikariConfig("/hikari.properties");
-    config.setUsername("root");
-    config.setPassword("");
-    config.addDataSourceProperty("databaseName", databaseName);
+    config.setUsername(mySqlConfiguration.getUsername());
+    config.setPassword(mySqlConfiguration.getPassword());
+    config.addDataSourceProperty("databaseName", mySqlConfiguration.getDb());
+    config.addDataSourceProperty("serverName", mySqlConfiguration.getHost());
 
     return new HikariDataSource(config);
   }

@@ -16,6 +16,7 @@
   </parent>
 
   <modules>
+    <module>MoonCore</module>
     <module>Mentat</module>
     <module>LunarCat</module>
     <module>ExampleApp</module>

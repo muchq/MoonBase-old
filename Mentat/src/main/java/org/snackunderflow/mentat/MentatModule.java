@@ -8,20 +8,14 @@ import org.skife.jdbi.v2.DBI;
 import javax.sql.DataSource;
 
 public class MentatModule extends AbstractModule {
-  private final String databaseName;
-
-  public MentatModule(String databaseName) {
-    this.databaseName = databaseName;
-  }
-
   @Override
   protected void configure() {
   }
 
   @Provides
   @Singleton
-  public DBI getDbi() {
-    DataSource dataSource = new MentatDataSourceProvider(databaseName).get();
+  public DBI getDbi(MySqlConfiguration configuration) {
+    DataSource dataSource = new MentatDataSourceProvider(configuration).get();
     return new DBI(dataSource);
   }
 }
