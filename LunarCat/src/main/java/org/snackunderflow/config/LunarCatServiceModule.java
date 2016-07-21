@@ -23,9 +23,8 @@ public class LunarCatServiceModule extends AbstractModule {
   @Override
   protected void configure() {
     install(new RequestScopeModule());
-    Multibinder<StartupTask> multibinder = Multibinder.newSetBinder(binder(), StartupTask.class);
     packagesToScan.forEach(this::bindJaxRs);
-    bindLifeCycle(multibinder);
+    bindLifeCycle(Multibinder.newSetBinder(binder(), StartupTask.class));
   }
 
   private void bindLifeCycle(Multibinder<StartupTask> multibinder) {
