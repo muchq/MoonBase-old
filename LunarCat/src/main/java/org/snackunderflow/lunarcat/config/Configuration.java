@@ -1,4 +1,4 @@
-package org.snackunderflow.config;
+package org.snackunderflow.lunarcat.config;
 
 import com.google.common.base.Preconditions;
 import com.google.inject.Module;

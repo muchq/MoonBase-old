@@ -1,4 +1,4 @@
-package org.snackunderflow.config;
+package org.snackunderflow.lunarcat.config;
 
 import com.google.common.collect.Sets;
 import com.google.inject.AbstractModule;
@@ -7,7 +7,7 @@ import org.jboss.resteasy.plugins.guice.ext.RequestScopeModule;
 import org.reflections.Reflections;
 import org.reflections.scanners.SubTypesScanner;
 import org.reflections.util.ConfigurationBuilder;
-import org.snackunderflow.lifecycle.StartupTask;
+import org.snackunderflow.lunarcat.lifecycle.StartupTask;
 
 import javax.ws.rs.Path;
 import javax.ws.rs.ext.Provider;

@@ -1,4 +1,4 @@
-package org.snackunderflow.providers;
+package org.snackunderflow.lunarcat.providers;
 
 import javax.ws.rs.BadRequestException;
 import javax.ws.rs.NotFoundException;

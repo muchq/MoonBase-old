@@ -1,8 +1,8 @@
 package com.andyaylward.lunarexample;
 
 import com.andyaylward.lunarexample.config.ExampleModule;
-import org.snackunderflow.BaseService;
-import org.snackunderflow.config.Configuration;
+import org.snackunderflow.lunarcat.BaseService;
+import org.snackunderflow.lunarcat.config.Configuration;
 
 public class ExampleApp {
   public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package org.snackunderflow;
+package org.snackunderflow.lunarcat;
 
 
 import com.google.inject.Guice;
@@ -12,9 +12,9 @@ import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.jboss.resteasy.plugins.guice.GuiceResteasyBootstrapServletContextListener;
 import org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher;
-import org.snackunderflow.config.Configuration;
-import org.snackunderflow.config.LunarCatServiceModule;
-import org.snackunderflow.lifecycle.StartupTask;
+import org.snackunderflow.lunarcat.config.Configuration;
+import org.snackunderflow.lunarcat.config.LunarCatServiceModule;
+import org.snackunderflow.lunarcat.lifecycle.StartupTask;
 
 import java.util.EventListener;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package org.snackunderflow.providers;
+package org.snackunderflow.lunarcat.providers;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;

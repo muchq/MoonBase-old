@@ -1,4 +1,4 @@
-package org.snackunderflow.lifecycle;
+package org.snackunderflow.lunarcat.lifecycle;
 
 public interface StartupTask {
   void execute();
