@@ -4,9 +4,9 @@ import com.google.inject.Provides;
 import org.skife.jdbi.v2.DBI;
 import org.snackunderflow.mentat.MentatModule;
 import org.snackunderflow.mentat.MySqlConfiguration;
-import org.snackunderflow.moonbase.core.BaseGuiceModule;
+import org.snackunderflow.moonbase.core.ReinstallableGuiceModule;
 
-public class ExampleDataModule extends BaseGuiceModule {
+public class ExampleDataModule extends ReinstallableGuiceModule {
   @Override
   protected void configure() {
     install(new MentatModule());

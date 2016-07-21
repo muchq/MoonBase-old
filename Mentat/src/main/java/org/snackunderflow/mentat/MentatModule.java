@@ -6,9 +6,9 @@ import com.hubspot.rosetta.jdbi.RosettaMapperFactory;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.skife.jdbi.v2.DBI;
-import org.snackunderflow.moonbase.core.BaseGuiceModule;
+import org.snackunderflow.moonbase.core.ReinstallableGuiceModule;
 
-public class MentatModule extends BaseGuiceModule {
+public class MentatModule extends ReinstallableGuiceModule {
   @Override
   protected void configure() {
   }
